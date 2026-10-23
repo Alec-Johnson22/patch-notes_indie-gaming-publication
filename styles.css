@@ -11,7 +11,7 @@
 	--color-page: var(--color-dark-gray);
 	--color-panel: var(--color-med-gray);
 	--color-text: var(--color-off-white);
-	--color-text-alt: var(--color-sage);
+	--color-text-sub: var(--color-sage);
 	--color-gaming-tag: var(--color-orange);
 	--color-tcg-tag: var(--color-violet);
 
@@ -21,11 +21,11 @@
 	--font-tag: "Courier New", monospace;
 
 	/* Type Scaling Tokens */
-	--text-sm: clamp(.75rem, .75rem + .15vw, 1rem);
-	--text-base: clamp(1rem, 1rem + .2vw, 1.25rem);
-	--text-h3: clamp(1.25rem, 1.25rem + .5vw, 1.5rem);
-	--text-h2: clamp(1.75rem, 1.5rem + 2vw, 2.75rem);
-	--text-h1: clamp(2.5rem, 1.75rem + 4vw, 5.5rem);
+	--text-sm: clamp(0.75rem, 0.7rem + 0.15vw, 0.875rem);
+	--text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
+	--text-h3: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
+	--text-h2: clamp(1.5rem, 1.25rem + 1.5vw, 2.25rem);
+	--text-h1: clamp(1.875rem, 1.5rem + 2.5vw, 4rem);
 
 	/* Spacing Tokens */
 	--space-1: 0.25rem;
@@ -42,4 +42,114 @@
 	--rad-med: 0.5rem;
 	--rad-lg: .75rem;
 	--border-width: 1px;
+}
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	background-color: var(--color-page);
+	color: var(--color-text);
+}
+
+main {
+	flex: 1;
+}
+
+header {
+	text-align: center;
+	margin-bottom: var(--space-1);
+	font-size: var(--text-h1);
+}
+
+h1 a {
+	color: var(--color-text);
+	text-decoration: underline wavy var(--color-gaming-tag);
+}
+
+nav {
+	border-bottom: 1px solid var(--color-text);
+	border-top: 1px solid var(--color-text);
+}
+
+ul {
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	gap: var(--space-16);
+	margin: 0;
+	padding: var(--space-4);
+}
+
+ul a {
+	text-decoration: none;
+	color: var(--color-text);
+	padding: var(--space-4);
+}
+
+h2 {
+	text-align: left;
+	font-size: var(--text-h2);
+	margin-left: var(--space-12);
+}
+
+h3 {
+	color: var(--color-text);
+	font-size: var(--text-h3);
+}
+
+a {
+	text-decoration: none;
+}
+
+.card-row {
+	display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+    gap: var(--space-4);
+    width: 100%;
+    padding-inline: var(--space-4);
+	justify-content: space-between;
+    text-align: center;
+}
+
+.card {
+	background-color: var(--color-panel);
+	border: var(--space-1) solid var(--color-text-sub);
+	padding: var(--space-2);
+	min-width: 0;
+	max-width: 600px;
+	height: 100%;
+	margin: var(--space-2);
+}
+
+.card img {
+	display: block;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+}
+
+.card p {
+	color: var(--color-text-sub);
+	text-align: center;
+}
+
+.gaming {
+	background-color: var(--color-gaming-tag);
+	text-align: center;
+}
+
+.tcg {
+	background-color: var(--color-tcg-tag);
+	text-align: center;
+}
+
+footer {
+	margin-top: var(--space-4);
+	text-align: center;
 }
