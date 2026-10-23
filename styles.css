@@ -4,8 +4,10 @@
 	--color-med-gray: #23262d;
 	--color-off-white: #f4f0e8;
 	--color-orange: #ff6538;
+	--color-dark-orange: #c74424;
 	--color-sage: #a6b0a0;
 	--color-violet: #9b5de5;
+	--color-yellow: #ffd166;
 
 	/* Semantic Color Tokens */
 	--color-page: var(--color-dark-gray);
@@ -14,6 +16,10 @@
 	--color-text-sub: var(--color-sage);
 	--color-gaming-tag: var(--color-orange);
 	--color-tcg-tag: var(--color-violet);
+	--color-alt-theme-bg: var(--color-yellow);
+	--color-alt-text: var(--color-dark-gray);
+	--color-button-bg: var(--color-orange);
+	--color-button-hover: var(--color-dark-orange);
 
 	/* Type Tokens */
 	--font-display: Tahoma, Arial, sans-serif;
@@ -27,7 +33,7 @@
 	--text-h2: clamp(1.5rem, 1.25rem + 1.5vw, 2.25rem);
 	--text-h1: clamp(1.875rem, 1.5rem + 2.5vw, 4rem);
 
-	/* Spacing Tokens */
+	/* Spacing Tokens - each .25rem = 1 */
 	--space-1: 0.25rem;
 	--space-2: 0.5rem;
 	--space-3: 0.75rem;
@@ -62,6 +68,7 @@ main {
 }
 
 header {
+	font-family: var(--font-display);
 	text-align: center;
 	margin-bottom: var(--space-1);
 	font-size: var(--text-h1);
@@ -75,30 +82,36 @@ h1 a {
 nav {
 	border-bottom: 1px solid var(--color-text);
 	border-top: 1px solid var(--color-text);
+	font-family: var(--font-display);
+	font-size: var(--text-base);
 }
 
 ul {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	list-style-type: none;
-	gap: var(--space-16);
+	gap: var(--space-2) var(--space-4);
 	margin: 0;
-	padding: var(--space-4);
+	padding: var(--space-2);
 }
 
 ul a {
+	display: block;
 	text-decoration: none;
 	color: var(--color-text);
-	padding: var(--space-4);
+	padding: var(--space-6);
 }
 
 h2 {
+	font-family: var(--font-display);
 	text-align: left;
 	font-size: var(--text-h2);
 	margin-left: var(--space-12);
 }
 
 h3 {
+	font-family: var(--font-display);
 	color: var(--color-text);
 	font-size: var(--text-h3);
 }
@@ -135,6 +148,8 @@ a {
 }
 
 .card p {
+	font-family: var(--font-body);
+	font-size: var(--text-base);
 	color: var(--color-text-sub);
 	text-align: center;
 }
@@ -152,4 +167,30 @@ a {
 footer {
 	margin-top: var(--space-4);
 	text-align: center;
+}
+
+/* alt theme */
+.featured {
+	background-color: var(--color-alt-theme-bg);
+}
+.featured h3 {
+	color: var(--color-alt-text);
+	text-decoration: underline;
+}
+.featured p {
+	font-weight: bold;
+	text-align: left;
+	font-size: var(--font-tag);
+	color: var(--color-gaming-tag);
+}
+.button-gaming {
+	background-color: var(--color-button-bg);
+	font-family: var(--font-body);
+	font-size: var(--text-base);
+	padding: var(--space-2);
+	margin-top: var(--space-4);
+	cursor: pointer;
+}
+.button-gaming:hover {
+	background-color: var(--color-button-hover);
 }
