@@ -21,5 +21,5 @@ Required Tests:
 -The HTML has been verified using Nu HTML Checker. The CSS has been verified using The W3C CSS Validation Service.
 
 Publication Links:
-Repository Link - 
-Published Specimen Link - 
+Repository Link - https://github.com/Alec-Johnson22/patch-notes_indie-gaming-publication
+Published Specimen Link - https://alec-johnson22.github.io/patch-notes_indie-gaming-publication/
