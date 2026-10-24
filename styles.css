@@ -27,11 +27,11 @@
 	--font-tag: "Courier New", monospace;
 
 	/* Type Scaling Tokens */
-	--text-sm: clamp(0.75rem, 0.7rem + 0.15vw, 0.875rem);
-	--text-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1.0625rem);
-	--text-h3: clamp(1.125rem, 1rem + 0.5vw, 1.375rem);
-	--text-h2: clamp(1.5rem, 1.25rem + 1.5vw, 2.25rem);
-	--text-h1: clamp(1.875rem, 1.5rem + 2.5vw, 4rem);
+	--text-sm: clamp(0.7rem, 0.65rem + 0.12vw, 0.8125rem);
+	--text-base: clamp(0.875rem, 0.85rem + 0.15vw, 1rem);
+	--text-h3: clamp(1rem, 0.95rem + 0.4vw, 1.25rem);
+	--text-h2: clamp(1.375rem, 1.2rem + 1.2vw, 2rem);
+	--text-h1: clamp(1.75rem, 1.4rem + 2vw, 3.5rem);
 
 	/* Spacing Tokens - each .25rem = 1 */
 	--space-1: 0.25rem;
@@ -107,6 +107,13 @@ h2 {
 	font-family: var(--font-display);
 	text-align: left;
 	font-size: var(--text-h2);
+	margin-left: var(--space-12);
+}
+
+.s1 {
+	font-family: var(--font-body);
+	text-align: left;
+	font-size: var(--text-base);
 	margin-left: var(--space-12);
 }
 
